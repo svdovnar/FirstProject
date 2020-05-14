@@ -1,34 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Primitives_1
 {
-    //ЗНАЧЕМЫЕ 
-    enum MyEnum
+    internal class PrimitivesCollection
     {
-        day1,
-        day2,
-        day3
-    }
+        //ЗНАЧЕМЫЕ 
+        enum MyEnum
+        {
+            day1,
+            day2,
+            day3
+        }
 
-    struct MyStruct
-    {
-    }
+        struct MyStruct
+        {
+        }
 
-    //ССЫЛОЧНЫЕ
-    class MyClass
-    {
-    }
+        //ССЫЛОЧНЫЕ
+        class MyClass
+        {
+        }
 
-    interface IMyInterface
-    {
-    }
-
-    delegate void MyDelegate();
-
-    class Program
-    {
-        static void Main(string[] args)
+        interface IMyInterface
+        {
+        
+        }
+    
+        delegate void MyDelegate();
+        public static void Main(string[] args)
         {
             //Ссылочные типы данных:
             MyClass cls1, cls2, cls3;
@@ -37,7 +36,7 @@ namespace Primitives_1
             IMyInterface intrf1, intrf2, intrf3;
             List<object> list1, list2, list3; // array, Dictionary<key,value>, IEnumerable<>, Queue<>.....
             MyDelegate dl1, dl2, dl3;
-
+        
             //Значимые типы данных:
             int i1, i2, i3; //uint, short, long, ulong, ushort,sbyte
             float f1, f2, f3;
