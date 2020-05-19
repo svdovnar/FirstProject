@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework", "Homework\Homewo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{DD8E010A-2144-43A1-9643-621F2D9EE2E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork_2", "HomeWork_2\HomeWork_2.csproj", "{19259C4D-3B28-4B38-9C5E-9866AF3B5757}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{DD8E010A-2144-43A1-9643-621F2D9EE2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD8E010A-2144-43A1-9643-621F2D9EE2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD8E010A-2144-43A1-9643-621F2D9EE2E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19259C4D-3B28-4B38-9C5E-9866AF3B5757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19259C4D-3B28-4B38-9C5E-9866AF3B5757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19259C4D-3B28-4B38-9C5E-9866AF3B5757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19259C4D-3B28-4B38-9C5E-9866AF3B5757}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
