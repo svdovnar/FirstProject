@@ -8,39 +8,87 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            List<students> list = new List<students>();
+            List<Student> students = new List<Student>();
             Random rand = new Random();
-            list.Add(new students() { name = "Увалера", firstMark = rand.Next(1, 5), secondMark = rand.Next(1, 5), thirdMark = rand.Next(1, 5), forthMark = rand.Next(1,5), fifthMark = rand.Next(1,5) });
-            list.Add(new students() { name = "Ванятка", firstMark = rand.Next(1, 5), secondMark = rand.Next(1, 5), thirdMark = rand.Next(1, 5) , forthMark = rand.Next(1,5), fifthMark = rand.Next(1,5)});
-            list.Add(new students() { name = "Славон", firstMark = rand.Next(1, 5), secondMark = rand.Next(1, 5), thirdMark = rand.Next(1, 5) , forthMark = rand.Next(1,5), fifthMark = rand.Next(1,5)});
-            list.Add(new students() { name = "Никитос", firstMark = rand.Next(1, 5), secondMark = rand.Next(1, 5), thirdMark = rand.Next(1, 5) , forthMark = rand.Next(1,5), fifthMark = rand.Next(1,5)});
-            list.Add(new students() { name = "Вован", firstMark = rand.Next(1, 5), secondMark = rand.Next(1, 5), thirdMark = rand.Next(1, 5), forthMark = rand.Next(1,5), fifthMark = rand.Next(1,5)});
-            
-            List<students> newList = new List<students>();
-            foreach(var item in list)
+            students.Add(new Student("Увалера", rand));
+            students.Add(new Student("Ванятка", rand));
+            students.Add(new Student("Никита", rand));
+            students.Add(new Student("Слава", rand));
+            students.Add(new Student("Вова", rand));
+
+            foreach (var student in students)
             {
-                double number = ((double)item.firstMark + (double)item.secondMark + (double)item.thirdMark + (double)item.forthMark + (double)item.fifthMark) / 5;
-                int sum = ((int)item.firstMark + (int)item.secondMark + (int)item.thirdMark + (int)item.forthMark + (int)item.fifthMark);
-                newList.Add(new students() { name = item.name, srMark = number, sumMark = sum });
-                Console.WriteLine(item.name + " " + item.firstMark + " " + item.secondMark + " " + item.thirdMark + " " + item.forthMark + " " + item.fifthMark + ". Сумма оценок = {0:0}", sum);
+                Console.Write($"{student.StudentName}");
+                foreach (var studentMark in student.Marks)
+                {
+                    Console.Write($" {studentMark}");
+                }
+
+                Console.WriteLine();
             }
-            newList = newList.OrderBy(o => o.srMark).ToList();
-            for (int i = 0; i < 5; i++)
+
+            int markSum = 0;
+            foreach (var student in students)
             {
-                Console.WriteLine(newList[i].name + " " + newList[i].srMark);
+                for (int i = 0; i < student.Marks.Count; i++)
+                {
+                    markSum += student.Marks[i];
+                }
             }
-            Console.ReadLine();
+
+            Console.WriteLine($"Сумма оценок всех студентов: {markSum}");
+
+            foreach (var student in students)
+            {
+                float sumOfMarks = 0;
+                for (int i = 0; i < student.Marks.Count; i++)
+                {
+                    sumOfMarks += student.Marks[i];
+                }
+
+                float averageMark = sumOfMarks / student.Marks.Count;
+                student.AverageMark = averageMark;
+            }
+
+            foreach (var student in students)
+            {
+                Console.WriteLine($"Ученик: {student.StudentName}, имеет среднюю оценку [{student.AverageMark}]");
+            }
+
+            var orderedStudents = students.OrderBy(st => st.AverageMark);
+
+            foreach (var orderedStudent in orderedStudents)
+            {
+                Console.WriteLine(
+                    $"Ученик: {orderedStudent.StudentName}, имеет среднюю оценку [{orderedStudent.AverageMark}]");
+            }
         }
     }
-    class students
+
+    class Student
     {
-        public string name { get; set; }
-        public int firstMark { get; set; }
-        public int secondMark { get; set; }
-        public int thirdMark { get; set; }
-        public int forthMark { get; set; }
-        public int fifthMark { get; set; }
-        public int sumMark { get; set; }
-        public double srMark { get; set; }
+        public Student(string studentName, Random rand)
+        {
+            StudentName = studentName;
+            int randomNumber = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                int newMark;
+                do
+                {
+                    newMark = rand.Next(1, 10);
+                } while (newMark == randomNumber);
+
+                randomNumber = newMark;
+
+                Marks.Add(randomNumber);
+            }
+        }
+
+        public string StudentName { get; set; }
+
+        public List<int> Marks = new List<int>();
+        public int SumMark { get; set; }
+        public float AverageMark { get; set; }
     }
 }
