@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork_2", "HomeWork_2\HomeWork_2.csproj", "{19259C4D-3B28-4B38-9C5E-9866AF3B5757}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrinagleHomeWork", "TrinagleHomeWork\TrinagleHomeWork.csproj", "{37F4E68C-BBE2-42A1-B0DD-1BB61F8EDDAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{19259C4D-3B28-4B38-9C5E-9866AF3B5757}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19259C4D-3B28-4B38-9C5E-9866AF3B5757}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19259C4D-3B28-4B38-9C5E-9866AF3B5757}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37F4E68C-BBE2-42A1-B0DD-1BB61F8EDDAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37F4E68C-BBE2-42A1-B0DD-1BB61F8EDDAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37F4E68C-BBE2-42A1-B0DD-1BB61F8EDDAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37F4E68C-BBE2-42A1-B0DD-1BB61F8EDDAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

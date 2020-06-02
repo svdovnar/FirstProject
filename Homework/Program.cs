@@ -1,49 +1,30 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace Homework
 {
-    public enum Food
-    { 
-        Tuna,
-        Salmon,
-        Pizza,
-        Spagetti,
-        Salad,
-        Tomatoes
-    }
-
-    public class EnumTry
+    
+}
+public static class Kata
+{
+    public static string AbbrevName(string name)
     {
-        public static void Main()
+        if (name.Length == 0)
         {
-            Food food = (Food) (new Random()).Next(0, 5);
-
-            if (food == Food.Tuna)
-            {
-                Console.WriteLine("Ешь тунца");
-            }
-            else if (food == Food.Salmon)
-            {
-                Console.WriteLine("Ешь лосось");
-            }
-            else if (food == Food.Pizza)
-            {
-                Console.WriteLine("Ешь пиццу");
-            }
-            else if (food == Food.Spagetti)
-            {
-                Console.WriteLine("Ешь спагетти");
-            }
-            else if (food == Food.Salad)
-            {
-                Console.WriteLine("Ешь салат");
-            }
-            else
-            {
-                Console.WriteLine("Нихуя не ешь");
-            }
+            return name;
         }
-
+        //Console.Write(Char.ToUpper(name[0]));
+        for (int i = 1; i < name.Length - 1; i++)
+        {
+           // if (name[i] == ' ')
+            //Console.Write("." + Char.ToUpper(name[i + 1]));
+        }
+        return name;
     }
- 
+    public static void Main()
+    {
+        string name = "Sam Harris";
+        var result = AbbrevName(name);
+        Console.WriteLine(result);
+    }
 }
