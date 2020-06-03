@@ -6,19 +6,21 @@ namespace TrinagleHomeWork
     {
         public static void Main(string[] args)
         { 
-           Triangle triangle = new Triangle();
-           var sideAB = triangle.GetSideAB();
-           Console.WriteLine(sideAB);
-           var sideBC = triangle.GetSideBC();
-           Console.WriteLine(sideBC);
-           var sideCA = triangle.GetSideCA();
-           Console.WriteLine(sideCA);
-           var perimeter = triangle.GetPerimeter();
-           Console.WriteLine(perimeter);
-           var square = triangle.GetSquare();
-           Console.WriteLine(square);
-           var angleA = triangle.GetAngleA();
-           Console.WriteLine(angleA);
+           Triangle triangle = new Triangle(1,2,1,3,1,4);
+
+
+           Triangle triangle1 = new Triangle();
+
+
+           var pr = triangle1.Perimiter;
+
+           triangle1.X1 = 3;
+
+           var sq =  triangle1.Sqare;
+
+
+           var x1 = triangle.X1;
+
         }
     }
 }
