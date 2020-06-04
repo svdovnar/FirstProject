@@ -7,124 +7,113 @@ namespace TrinagleHomeWork
 {
     public class Triangle
     {
-        double x1, X2, X3, Y1, Y2, Y3;
+        private double aX, aY, bX, bY, cX, cY;
+        private double aB, bC, cA;
 
-        double Square;
-        double AB, BC, CA;
-
-        public double Perimiter;
-        public double Sqare;
         public Triangle()
         {
+            GetAllSides();
         }
 
-        public Triangle(double x1, double y1, double x2, double y2, double x3, double y3)
+        public Triangle(double aX, double aY, double bX, double bY, double cX, double cY)
         {
-            this.x1 = x1;
-            this.Y1 = y1;
-            this.X2 = x2;
-            this.Y2 = y2;
-            this.X3 = x3;
-            this.Y3 = y3;
-
-
-            Perimiter =  GetPerimeter();
-            Sqare = GetSquare();
-
+            this.aX = aX;
+            this.bY = bY;
+            this.aY = aY;
+            this.cX = cX;
+            this.bX = bX;
+            this.cY = cY;
+            GetAllSides();
         }
 
-        public Triangle(Dot A, Dot B, Dot C)
+        public Triangle(Point A, Point B, Point C)
         {
-            this.x1 = A.x;
-            this.Y1 = A.y;
-            this.X2 = B.x;
-            this.Y2 = B.y;
-            this.X3 = C.x;
-            this.Y3 = C.y;
+            this.aX = A.x;
+            this.bY = A.y;
+            this.aY = B.x;
+            this.cX = B.y;
+            this.bX = C.x;
+            this.cY = C.y;
 
-            Perimiter =  GetPerimeter();
-            Sqare = GetSquare();
+            GetAllSides();
         }
 
-        public double X1
+        public double GetSideLength(double firstPointX, double firstPointY, double secondPointX, double secondPointY)
         {
-            get => x1;
+            var sum1 = Math.Pow(secondPointX - firstPointX, 2);
 
-            set
-            {
-                x1 = value;
+            var sum2 = Math.Pow(secondPointY - firstPointY, 2);
 
-                Perimiter =  GetPerimeter();
-                Sqare = GetSquare();
-            }
-        }
-
-        public double GetSideAB()
-        {
-            AB = Math.Sqrt(Math.Pow((Y1 - x1), 2) + Math.Pow((Y2 - X2), 2));
-            return AB;
+            return Math.Sqrt(sum1 + sum2);
         }
 
         public double GetSideBC()
         {
-            BC = Math.Sqrt(Math.Pow((X3 - X2), 2) + Math.Pow((Y3 - Y2), 2));
-            return BC;
+            return GetSideLength(bX,bY,cX,cY);
+        }
+
+        public double GetSideAB()
+        {
+            return GetSideLength(aX,aY,bX,bY);
         }
 
         public double GetSideCA()
         {
-            CA = Math.Sqrt(Math.Pow((X3 - x1), 2) + Math.Pow((Y3 - Y1), 2));
-            return CA;
+            return GetSideLength(aX,aY,cX,cY);
         }
 
         public double GetAngleA()
         {
-            return Math.Acos((AB * AB + CA * CA - BC * BC) / (2 * AB * CA)) * 180 / Math.PI;
+            return Math.Acos((aB * aB + cA * cA - bC * bC) / (2 * aB * cA)) * 180 / Math.PI;
         }
 
         public double GetAngleB()
         {
-            return Math.Acos((AB * AB + BC * BC - CA * CA) / (2 * AB * BC)) * 180 / Math.PI;
+            return Math.Acos((aB * aB + bC * bC - cA * cA) / (2 * aB * bC)) * 180 / Math.PI;
         }
 
         public double GetAngleC()
         {
-            return Math.Acos((BC * BC + CA * CA - AB * AB) / (2 * BC * CA)) * 180 / Math.PI;
+            return Math.Acos((bC * bC + cA * cA - aB * aB) / (2 * bC * cA)) * 180 / Math.PI;
         }
 
-        private double GetPerimeter()
+        public double GetPerimeter()
         {
             GetAllSides();
 
-            var perimeter = AB + BC + CA;
+            var perimeter = aB + bC + cA;
 
             return perimeter;
         }
 
-        private double GetSquare()
+        public double GetSquare()
         {
             GetAllSides();
 
-            var p = GetPerimeter() / 2;
+            var halfOfPerimeter = GetPerimeter() / 2;
 
-            return Math.Sqrt(p * (p - AB) * (p - BC) * (p - CA));
+            return Math.Sqrt(halfOfPerimeter * (halfOfPerimeter - aB) * (halfOfPerimeter - bC) * (halfOfPerimeter - cA));
         }
 
         private void GetAllSides()
         {
-            AB = GetSideAB();
-            BC = GetSideBC();
-            CA = GetSideCA();
+            aB = GetSideAB();
+            bC = GetSideBC();
+            cA = GetSideCA();
         }
 
+        public override string ToString()
+        {
+            return $"{nameof(aX)}: {aX}, {nameof(aY)}: {aY}, {nameof(bX)}: {bX}, {nameof(bY)}: {bY}, {nameof(cX)}: {cX}, {nameof(cY)}: {cY}, {nameof(aB)}: {aB}, {nameof(bC)}: {bC}, {nameof(cA)}: {cA}";
+        }
     }
 
-    public class Dot
+    public class Point
     {
         public float x;
         public float y;
 
-        public Dot(float x, float y)
+        public Point(float x, float y)
         {
             this.x = x;
             this.y = y;
