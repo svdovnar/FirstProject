@@ -106,17 +106,6 @@ namespace TrinagleHomeWork
         {
             return $"{nameof(aX)}: {aX}, {nameof(aY)}: {aY}, {nameof(bX)}: {bX}, {nameof(bY)}: {bY}, {nameof(cX)}: {cX}, {nameof(cY)}: {cY}, {nameof(aB)}: {aB}, {nameof(bC)}: {bC}, {nameof(cA)}: {cA}";
         }
-    }
-
-    public class Point
-    {
-        public float x;
-        public float y;
-
-        public Point(float x, float y)
-        {
-            this.x = x;
-            this.y = y;
-        }
+        
     }
 }
