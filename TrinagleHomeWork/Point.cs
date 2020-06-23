@@ -2,6 +2,11 @@
 {
     public class Point
     {
+        public override string ToString()
+        {
+            return $"{nameof(x)}: {x}, {nameof(y)}: {y}";
+        }
+
         public float x;
         public float y;
 
@@ -9,11 +14,6 @@
         {
             this.x = x;
             this.y = y;
-        }
-
-        public override string ToString()
-        {
-            return $"Coordinates: [{x},{y}]";
         }
     }
 }

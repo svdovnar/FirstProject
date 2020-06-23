@@ -92,11 +92,7 @@ namespace TrinagleHomeWork
 
             var halfOfPerimeter = GetPerimeter() / 2;
 
-            var first = halfOfPerimeter - aB;
-            var second = halfOfPerimeter - bC;
-            var third = halfOfPerimeter - cA;
-            var multiplyResult = halfOfPerimeter * first * second * third;
-            return Math.Sqrt(multiplyResult);
+            return Math.Sqrt(halfOfPerimeter * (halfOfPerimeter - aB) * (halfOfPerimeter - bC) * (halfOfPerimeter - cA));
         }
 
         private void GetAllSides()
@@ -110,5 +106,6 @@ namespace TrinagleHomeWork
         {
             return $"{nameof(aX)}: {aX}, {nameof(aY)}: {aY}, {nameof(bX)}: {bX}, {nameof(bY)}: {bY}, {nameof(cX)}: {cX}, {nameof(cY)}: {cY}, {nameof(aB)}: {aB}, {nameof(bC)}: {bC}, {nameof(cA)}: {cA}";
         }
+        
     }
 }
