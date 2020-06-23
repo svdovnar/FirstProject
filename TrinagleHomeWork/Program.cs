@@ -23,7 +23,7 @@ namespace TrinagleHomeWork
             Console.WriteLine($"Площадь круга: {circle.GetSquare()}");
             Console.WriteLine($"Периметр круга: {circle.GetPerimeter()}");
 
-            Point somePoint = new Point(2, 5);
+            Point somePoint = new Point(2, 6);
             bool pointInsideCircle = circle.IsPointInside(somePoint);
 
             if (pointInsideCircle)
@@ -51,6 +51,11 @@ namespace TrinagleHomeWork
         private float _radius;
         private Point _center;
 
+        public override string ToString()
+        {
+            return $"{nameof(_radius)}: {_radius}, {nameof(_center)}: {_center}";
+        }
+
         public Circle(Point bottomLeftSquarePoint, float radius)
         {
             _center = bottomLeftSquarePoint;
@@ -74,7 +79,16 @@ namespace TrinagleHomeWork
 
         public bool IsPointInside(Point somePoint)
         {
-            throw new NotImplementedException();
+            float distanceFromCenterToPoint = somePoint.GetDistance(_center);
+            if (distanceFromCenterToPoint < _radius)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+
     }
 }
