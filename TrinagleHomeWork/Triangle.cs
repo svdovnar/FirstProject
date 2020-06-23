@@ -92,7 +92,11 @@ namespace TrinagleHomeWork
 
             var halfOfPerimeter = GetPerimeter() / 2;
 
-            return Math.Sqrt(halfOfPerimeter * (halfOfPerimeter - aB) * (halfOfPerimeter - bC) * (halfOfPerimeter - cA));
+            var first = halfOfPerimeter - aB;
+            var second = halfOfPerimeter - bC;
+            var third = halfOfPerimeter - cA;
+            var multiplyResult = halfOfPerimeter * first * second * third;
+            return Math.Sqrt(multiplyResult);
         }
 
         private void GetAllSides()
@@ -105,18 +109,6 @@ namespace TrinagleHomeWork
         public override string ToString()
         {
             return $"{nameof(aX)}: {aX}, {nameof(aY)}: {aY}, {nameof(bX)}: {bX}, {nameof(bY)}: {bY}, {nameof(cX)}: {cX}, {nameof(cY)}: {cY}, {nameof(aB)}: {aB}, {nameof(bC)}: {bC}, {nameof(cA)}: {cA}";
-        }
-    }
-
-    public class Point
-    {
-        public float x;
-        public float y;
-
-        public Point(float x, float y)
-        {
-            this.x = x;
-            this.y = y;
         }
     }
 }
