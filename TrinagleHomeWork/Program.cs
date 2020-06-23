@@ -25,6 +25,7 @@ namespace TrinagleHomeWork
 
             Point somePoint = new Point(2, 5);
             bool pointInsideCircle = circle.IsPointInside(somePoint);
+
             if (pointInsideCircle)
             {
                 Console.WriteLine($"Точка {somePoint} находится внутри круга {circle}");
@@ -47,19 +48,28 @@ namespace TrinagleHomeWork
 
     internal class Circle
     {
+        private float _radius;
+        private Point _center;
+
         public Circle(Point bottomLeftSquarePoint, float radius)
         {
-            throw new NotImplementedException();
+            _center = bottomLeftSquarePoint;
+            _radius = radius;
         }
 
         public float GetSquare()
         {
-            return 0;
+            // S = pR^2;
+            float S = (float) Math.PI * _radius * _radius;
+            return S;
         }
+
 
         public float GetPerimeter()
         {
-            throw new NotImplementedException();
+            //P = 2pR
+            float P = 2 * (float) Math.PI * _radius;
+            return P;
         }
 
         public bool IsPointInside(Point somePoint)
