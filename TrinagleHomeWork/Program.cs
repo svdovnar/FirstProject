@@ -18,6 +18,7 @@ namespace TrinagleHomeWork
             Console.WriteLine(square.D);
             Console.WriteLine($"Площадь квадрата: {square.GetSquare()}");
             Console.WriteLine($"Периметр квадрата: {square.GetPerimeter()}");
+            
             float radius = 5f;
             Circle circle = new Circle(bottomLeftSquarePoint, radius);
             Console.WriteLine($"Площадь круга: {circle.GetSquare()}");
@@ -34,6 +35,13 @@ namespace TrinagleHomeWork
             {
                 Console.WriteLine($"Точка {somePoint} находится вне круга {circle}");
             }
+
+            float sideA = 4f;
+            float sideB = 8f;
+            Rectangle rectangle = new Rectangle(sideA, sideB);
+            Console.WriteLine($"Площадь прямоугольника: {rectangle.GetSquare()}");
+            Console.WriteLine($"Периметр прямоугольника: {rectangle.GetPerimeter()}");
+            Console.WriteLine($"Диагональ прямоугольника: {rectangle.GetDiagonal()}");
 
             // var pr = triangle1.Perimiter;
             //
