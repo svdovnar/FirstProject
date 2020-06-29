@@ -2,7 +2,7 @@
 
 namespace TrinagleHomeWork
 {
-    internal class Circle
+    public class Circle
     {
         private float _radius;
         private Point _center;
