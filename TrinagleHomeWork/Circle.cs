@@ -2,7 +2,7 @@
 
 namespace TrinagleHomeWork
 {
-    public class Circle
+    public class Circle : Figure
     {
         private float _radius;
         private Point _center;
@@ -18,7 +18,7 @@ namespace TrinagleHomeWork
             _radius = radius;
         }
 
-        public float GetSquare()
+        public override float GetSquare()
         {
             // S = pR^2;
             float S = (float) Math.PI * _radius * _radius;
@@ -45,6 +45,7 @@ namespace TrinagleHomeWork
                 return false;
             }
         }
+
 
     }
 }

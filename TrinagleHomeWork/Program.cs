@@ -48,28 +48,33 @@ namespace TrinagleHomeWork
             Console.WriteLine($"Периметр многоугольника: {polygon.GetPerimeter()}");
             Console.WriteLine($"Радиус вписанной окружности: {polygon.GetRadius()}");
 
-            
-            SqareFinder sqareFinder = new SqareFinder();
+            triangle.PrintCoolText();
+            SqareLogger sqareLogger = new SqareLogger();
 
-            sqareFinder.GetSqare(square);
-            sqareFinder.GetSqare(circle);
-            sqareFinder.GetSqare(rectangle);
-            sqareFinder.GetSqare(triangle);
-            sqareFinder.GetSqare(polygon);
-            
-            
-            PerimeterFinder perimeterFinder = new PerimeterFinder();
 
-            perimeterFinder.GetPerimeter(square);
-            perimeterFinder.GetPerimeter(circle);
-            perimeterFinder.GetPerimeter(rectangle);
-            perimeterFinder.GetPerimeter(triangle);
-            perimeterFinder.GetPerimeter(polygon);
+            sqareLogger.OutputSqare(square);
+            sqareLogger.OutputSqare(circle);
+            sqareLogger.OutputSqare(rectangle);
+            sqareLogger.OutputSqare(triangle);
+            sqareLogger.OutputSqare(polygon);
             
             
+            PerimeterLogger perimeterLogger = new PerimeterLogger();
+
+
+            perimeterLogger.OutputPerimetere(square);
+            perimeterLogger.OutputPerimetere(circle);
+            perimeterLogger.OutputPerimetere(rectangle);
+            perimeterLogger.OutputPerimetere(triangle);
+            perimeterLogger.OutputPerimetere(polygon);
             
             
-            
+
+            Hexagon hex = new Hexagon();
+
+            sqareLogger.OutputSqare(hex);
+
+
             // sqareFinder.GetSqare(circle);
             // var pr = triangle1.Perimiter;
             //

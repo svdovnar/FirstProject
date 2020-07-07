@@ -2,11 +2,10 @@
 
 namespace TrinagleHomeWork
 {
-    public class Polygon
+    public class Polygon : Figure
     {
         private float _sideLenght;
         private int _anglesNumber;
-        
 
         public Polygon(int anglesNumber, float sideLenght)
         {
@@ -14,7 +13,7 @@ namespace TrinagleHomeWork
             _anglesNumber = anglesNumber;
         }
 
-        public float GetSquare()
+        public override float GetSquare()
         {
             float square = GetRadius()*_sideLenght*_anglesNumber/2; 
             return square;

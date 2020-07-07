@@ -5,7 +5,7 @@ using System.Text;
 
 namespace TrinagleHomeWork
 {
-    public class Triangle
+    public class Triangle : Figure
     {
         private double aX, aY, bX, bY, cX, cY;
         private double aB, bC, cA;
@@ -86,14 +86,14 @@ namespace TrinagleHomeWork
             return perimeter;
         }
 
-        public double GetSquare()
+        public override float GetSquare()
         {
             GetAllSides();
 
             var halfOfPerimeter = GetPerimeter() / 2;
             var result = Math.Sqrt(halfOfPerimeter * (halfOfPerimeter - aB) * (halfOfPerimeter - bC) *
                                    (halfOfPerimeter - cA));
-            return result;
+            return (float)result;
         }
 
         private void GetAllSides()

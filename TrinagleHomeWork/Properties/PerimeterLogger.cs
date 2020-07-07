@@ -2,28 +2,29 @@
 
 namespace TrinagleHomeWork
 {
-    public class PerimeterFinder
+    public class PerimeterLogger
     {
-        public void GetPerimeter(Square square)
+        //open closed priciple
+        public void OutputPerimetere(Square square)
         {
             Console.WriteLine($"Периметр квадрата: {square.GetPerimeter()}");
         }
-        public void GetPerimeter(Circle circle)
+        public void OutputPerimetere(Circle circle)
         {
             Console.WriteLine($"Периметр круга: {circle.GetPerimeter()}");
         }
 
-        public void GetPerimeter(Rectangle rectangle)
+        public void OutputPerimetere(Rectangle rectangle)
         {
             Console.WriteLine($"Периметр прямоугольника: {rectangle.GetPerimeter()}");
         }
 
-        public void GetPerimeter(Triangle triangle)
+        public void OutputPerimetere(Triangle triangle)
         {
             Console.WriteLine($"Периметр треугольника: {triangle.GetPerimeter()}");
         }
 
-        public void GetPerimeter(Polygon polygon)
+        public void OutputPerimetere(Polygon polygon)
         {
             Console.WriteLine($"Периметр многоугольника: {polygon.GetPerimeter()}");
         }

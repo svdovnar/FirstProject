@@ -3,7 +3,7 @@ using System.Data.SqlTypes;
 
 namespace TrinagleHomeWork
 {
-    public class Square
+    public class Square : Figure, IComparable, ICloneable
     {
         private int _squareLength;
 
@@ -30,10 +30,10 @@ namespace TrinagleHomeWork
         //     return Math.Sqrt(sum1 + sum2);
         // }
 
-        public double GetSquare()
+        public override float GetSquare()
         {
             double result = _squareLength*2;
-            return result;
+            return (float)result;
         }
 
         public double GetPerimeter()
@@ -41,6 +41,16 @@ namespace TrinagleHomeWork
             double result = _squareLength*4;
             return result;
         }
-        
+
+
+        public int CompareTo(object obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object Clone()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
