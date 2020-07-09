@@ -18,7 +18,7 @@ namespace TrinagleHomeWork
             return square;
         }
 
-        public float GetPerimeter()
+        public override float GetPerimeter()
         { 
             float perimeter = (_sideA +_sideB)*2;
             return perimeter;

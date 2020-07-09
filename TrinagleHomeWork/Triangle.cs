@@ -77,13 +77,13 @@ namespace TrinagleHomeWork
             return Math.Acos((bC * bC + cA * cA - aB * aB) / (2 * bC * cA)) * 180 / Math.PI;
         }
 
-        public double GetPerimeter()
+        public override float GetPerimeter()
         {
             GetAllSides();
 
             var perimeter = aB + bC + cA;
 
-            return perimeter;
+            return (float)perimeter;
         }
 
         public override float GetSquare()

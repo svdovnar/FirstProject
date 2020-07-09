@@ -26,7 +26,7 @@ namespace TrinagleHomeWork
         }
 
 
-        public float GetPerimeter()
+        public override float GetPerimeter()
         {
             //P = 2pR
             float P = 2 * (float) Math.PI * _radius;

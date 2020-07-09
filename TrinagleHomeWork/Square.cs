@@ -36,10 +36,10 @@ namespace TrinagleHomeWork
             return (float)result;
         }
 
-        public double GetPerimeter()
+        public override float GetPerimeter()
         {
             double result = _squareLength*4;
-            return result;
+            return (float)result;
         }
 
 

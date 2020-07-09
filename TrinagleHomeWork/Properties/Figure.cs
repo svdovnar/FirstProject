@@ -11,5 +11,7 @@ namespace TrinagleHomeWork
         }
 
         public abstract float GetSquare();
+
+        public abstract float GetPerimeter();
     }
 }

@@ -62,11 +62,11 @@ namespace TrinagleHomeWork
             PerimeterLogger perimeterLogger = new PerimeterLogger();
 
 
-            perimeterLogger.OutputPerimetere(square);
-            perimeterLogger.OutputPerimetere(circle);
-            perimeterLogger.OutputPerimetere(rectangle);
-            perimeterLogger.OutputPerimetere(triangle);
-            perimeterLogger.OutputPerimetere(polygon);
+            perimeterLogger.OutputPerimeter(square);
+            perimeterLogger.OutputPerimeter(circle);
+            perimeterLogger.OutputPerimeter(rectangle);
+            perimeterLogger.OutputPerimeter(triangle);
+            perimeterLogger.OutputPerimeter(polygon);
             
             
 

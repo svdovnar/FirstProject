@@ -9,9 +9,5 @@ namespace TrinagleHomeWork
             Console.WriteLine($"Периметр фигуры равен: {figure.GetSquare()}");
         }
 
-        public void Compate(IComparable comparable)
-        {
-
-        }
     }
 }
