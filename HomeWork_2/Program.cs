@@ -17,6 +17,7 @@ namespace HomeWork_2
         {
             Random rand = new Random();
             var randIndex = rand.Next(0, all.Length);
+
             return all[randIndex];
         }
     }

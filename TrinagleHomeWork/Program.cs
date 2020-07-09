@@ -57,8 +57,13 @@ namespace TrinagleHomeWork
             sqareLogger.OutputSqare(rectangle);
             sqareLogger.OutputSqare(triangle);
             sqareLogger.OutputSqare(polygon);
-            
-            
+
+            //polygon.pointPublic = 6;
+
+            Console.WriteLine($"Point for polygon is: {polygon.pointPublic}");
+            Console.WriteLine($"Point for circle is: {circle.pointPublic}");
+
+
             PerimeterLogger perimeterLogger = new PerimeterLogger();
 
 

@@ -9,6 +9,5 @@ namespace TrinagleHomeWork
         {
             Console.WriteLine($"Периметр фигуры равен: {figure.GetPerimeter()}");
         }
-       
     }
 }

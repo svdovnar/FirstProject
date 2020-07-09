@@ -2,7 +2,7 @@
 
 namespace TrinagleHomeWork
 {
-    public class SqareLogger
+    public class SqareLogger 
     {
         public void OutputSqare(Figure figure)
         {

@@ -2,7 +2,7 @@
 
 namespace TrinagleHomeWork
 {
-    public class Circle : Figure
+    public class Circle : Figure, IHaveRadius
     {
         private float _radius;
         private Point _center;
@@ -16,6 +16,9 @@ namespace TrinagleHomeWork
         {
             _center = bottomLeftSquarePoint;
             _radius = radius;
+
+
+            pointPublic = 110;
         }
 
         public override float GetSquare()
@@ -47,5 +50,12 @@ namespace TrinagleHomeWork
         }
 
 
+        public float Radius { get; set; }
+        public void GetRadis(float x, int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int age { get; set; }
     }
 }
