@@ -2,7 +2,7 @@
 
 namespace TrinagleHomeWork
 {
-    public class Rectangle
+    public class Rectangle : Figure
     {
         private float _sideA;
         private float _sideB;
@@ -12,7 +12,7 @@ namespace TrinagleHomeWork
             _sideA = sideA;
             _sideB = sideB;
         }
-        public float GetSquare()
+        public override float GetSquare()
         {
             float square = _sideA * _sideB;
             return square;

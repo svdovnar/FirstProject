@@ -4,9 +4,14 @@ namespace TrinagleHomeWork
 {
     public class SqareLogger
     {
-        public void OutPutSqare(Figure figure)
+        public void OutputSqare(Figure figure)
         {
-            Console.WriteLine($"Площадь круга: {circle.GetSquare()}");
+            Console.WriteLine($"Периметр фигуры равен: {figure.GetSquare()}");
+        }
+
+        public void Compate(IComparable comparable)
+        {
+
         }
     }
 }
